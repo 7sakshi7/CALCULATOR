@@ -1,0 +1,106 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    overflow: hidden;
+    color: aliceblue;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    /* background: #1c1c25; */
+}
+.container::after{
+    content: '';
+    position: absolute;
+    /* background: linear-gradient(rgb(38, 0, 255),rgb(0, 247, 255)); */
+    top: -30%;
+    left: -90px;
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+
+}
+.container::before{
+    content: '';
+    position: absolute;
+    bottom:-40%;
+    left: 50%;
+    width: 600px;
+    height: 600px;
+    /* background: linear-gradient(#f00,#f0f); */
+    border-radius: 50%;
+}
+#calculator{
+    width: 340px;
+    top: 15px;
+    position: relative;
+    border-radius: 5px;
+    height: 530px;
+    /* background-color: #eaedef; */
+    background: #1c1c25;
+    /* background: rgba(255,255,255,0.05); */
+    margin: 0 auto;
+    box-shadow: 0 15px 15px rgba(0,0,0,0.5);
+    /* box-shadow: 0 4px 8px rgba(0,0,0,0.2),0 6px 20px rgba(0,0,0,0.19); */
+}
+#result{
+    height: 130px;
+    /* background: #b7c4c3; */
+    /* border: 2px solid white; */
+}
+#keyboard{
+    height: 390px;
+}
+#history{
+    text-align: right;
+    height: 20px;
+    margin: 0 20px;
+    padding-top: 20px;
+    font-size: 18px;
+
+}
+#output{
+    text-align: right;
+    height: 60px;
+    margin: 30px 20px;
+    font-size: 30px;
+}
+.operator,.number,.empty{
+    width: 50px;
+    height: 50px;
+    margin: 15px;
+    float: left;
+    font-size: 19px;
+    font-weight: bold;
+    border-width: 0;
+    border-radius: 50%;
+}
+.number,.empty{
+    background: rgba(255,255,255,0.5);
+    color: aliceblue;
+
+}
+.number,.operator{
+    cursor: pointer;
+}
+.number:active{
+    font-size: 24px;
+}
+.operator:active{
+    font-size: 26px;
+}
+.number:focus,.operator:focus{
+    box-shadow: 2px 3px 10px rgba(255,255,255,0.4);
+}
+button:nth-child(4),
+button:nth-child(8),
+button:nth-child(12),
+button:nth-child(16),
+button:nth-child(20){
+    font-size: 24px;
+    background-color: #30fcf2;
+}
